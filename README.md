@@ -63,6 +63,7 @@
    ```
    
      - **示例**
+     
   ```JS
   var userDatagrid = $("#userDatagrid");
   function addUser(){
@@ -78,8 +79,9 @@
 		});
   }
    ```
+   
    ```JAVA
-   //返回JSON的封装对象,msg为提示消息，当不为空时自动显示提示框
+   /**返回JSON的封装对象,msg为提示消息，当不为空时自动显示提示框**/
 public class Result {
 	
 	private boolean success = false;
@@ -125,11 +127,7 @@ public class Result {
 	
 	
 }
-
-
-
-
-  ```
+```
   
   ### 修改数据
   - **示例**
@@ -167,31 +165,38 @@ public class Result {
    参数1、2、3是必填参数，分别为datagrid对象，删除的Controller地址、ID列名，参数4为可选，是删除确认框的提示消息
    
     - **注意**
-    使用该方法必须使用datagrid的checkbox:true ，该方法仅识别勾选的数据
+    
+    **使用该方法必须使用datagrid的checkbox:true ，该方法仅识别勾选的数据
     
     - **示例**
+    
     ```JS
-    //初始化datagrid
+    
+    /**初始化datagrid**/
     var userDatagrid = UI.initDatagrid("#userDatagrid",{
-		  url: 'User/getList',
-	    idField:'userId',
+		  url: "User/getList",
+	    idField:"userId",
 	    onDblClickRow:function(index,row){
 	    	User.editUser();
 	    },
 	    toolbar:"#userToolbar",
-	    menuSelector:'#userContextMenu',//菜单
+	    menuSelector:"#userContextMenu",//菜单
 	    columns:[[    
-            {field:'userId',checkbox:true},//要使用UI.deleteByDatagrid删除方法，必须设置checkbox:true
-            {field:'userName',title:'<s:message code="m.user.userName"/>',width:80,align:'center'},    
-            {field:'loginName',title:'<s:message code="m.user.loginName"/>',width:60,align:'center'},    
-            {field:'phoneNumber',title:'<s:message code="m.user.phoneNumber"/>',width:80,align:'center'}, 
+            {field:"userId",checkbox:true},//要使用UI.deleteByDatagrid删除方法，必须设置checkbox:true
+            {field:"userName",title:""},    
+            {field:"loginName",title:""},    
+            {field:"phoneNumber",title:""}, 
         ]]
 	});
+  ```
+  
+  ```JS
   
   //删除方法
   function deleteUser(){
-    UI.deleteByDatagrid(userDatagrid, 'User/delete', "userId");
+    UI.deleteByDatagrid(userDatagrid, "User/delete", "userId");
   }
+  
     ```
     
     ### 其他
@@ -199,16 +204,9 @@ public class Result {
     ```JS
     //提示消息
       UI.showMessage("删除成功！");
-      
-      /**
-	  * 创建窗口 参数是json格式
-	  * @param url url  
-	  * @param title 窗口标题
-	  * @param callback 点击确定按钮的回调函数
-	  * @param width  窗口宽度 可以不指定
-	  * @param height 窗口高度 可以不指定
-	  * @param tools 添加额外按钮
-	  **/
+    ```
+    
+```JS
       UI.createWindow({
         url:'',
         title:'',
@@ -216,15 +214,28 @@ public class Result {
         height:222,
         callback:function(){},
         tools:[{
-					iconCls: 'icon-remove',
-					plain:true,
-					text:'删除',
-					handler: function(){
-						
-					}
-				}]
+		iconCls: 'icon-remove',
+		plain:true,
+		text:'删除',
+		handler: function(){
+
+		}
+	}]
       });
-      ```
+```
+- ** 说明
+
+  * 创建窗口 参数是json格式
+  * @param url url  
+  * @param title 窗口标题
+  * @param callback 点击确定按钮的回调函数
+  * @param width  窗口宽度 可以不指定
+  * @param height 窗口高度 可以不指定
+  * @param tools 添加额外按钮
+      
+      
+      
+      
       ```JS
       /**
 	  * easyui FORM表单说明
