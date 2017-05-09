@@ -80,8 +80,10 @@
   }
    ```
    
+   
+   返回JSON的封装对象,msg为提示消息，当不为空时自动显示提示框
    ```JAVA
-   /**返回JSON的封装对象,msg为提示消息，当不为空时自动显示提示框**/
+
 public class Result {
 	
 	private boolean success = false;
