@@ -133,23 +133,23 @@ public class Result {
   
 ## 修改数据
   
-- **示例**
+   - **示例**
+  
+  和添加方法大同小异
   
   ```JS
-  /**
-  和添加方法大同小异
-  **/
+
   var userDatagrid = $("#userDatagrid");
   UI.updateByWindow({
-			title:'<s:message code="label.edit"/><s:message code="m.user.info"/>',
+			title:'',
 			windowUrl:"User/toEdit", //编辑页面的跳转URL
 			width:800,
 			height:450,
-			formId:'#formUserEdit',	//表单ID
-			url:'User/update',		//提交表单时的URL
+			formId:"#formUserEdit",	//表单ID
+			url:"User/update",		//提交表单时的URL
 			datagrid:userDatagrid,
 			idField:"userId",			//ID列名,使用getUrl获得数据时才需要
-			getUrl:'User/getById',//获得用户信息详情的请求URL
+			getUrl:"User/getById",//获得用户信息详情的请求URL
 			onLoad:function(data){ //页面加载完毕事件
 				
 			},
