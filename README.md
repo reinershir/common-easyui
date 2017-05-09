@@ -129,11 +129,14 @@ public class Result {
 }
 ```
   
-  ### 修改数据
+### 修改数据
+  
   - **示例**
   
   ```JS
-  //和添加方法大同小异
+  /**
+  和添加方法大同小异
+  **/
   var userDatagrid = $("#userDatagrid");
   UI.updateByWindow({
 			title:'<s:message code="label.edit"/><s:message code="m.user.info"/>',
@@ -180,13 +183,16 @@ public class Result {
   ```
   
     
-    ### 其他
+   ### 其他
+   
     - **示例**
-    ```JS
-    //提示消息
-      UI.showMessage("删除成功！");
-    ```
     
+   *提示消息
+ ```JS
+     UI.showMessage("删除成功！");
+ ```
+    
+ *创建窗口
 ```JS
       UI.createWindow({
         url:'',
