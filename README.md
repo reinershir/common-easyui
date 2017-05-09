@@ -161,43 +161,25 @@ public class Result {
   
    ```JS
    UI.deleteByDatagrid(userDatagrid, 'User/delete', "userId","您确定要删除所选数据吗？");
+   
    ```
+   
    参数1、2、3是必填参数，分别为datagrid对象，删除的Controller地址、ID列名，参数4为可选，是删除确认框的提示消息
    
     - **注意**
     
-    **使用该方法必须使用datagrid的checkbox:true ，该方法仅识别勾选的数据
+    **使用该方法必须使用datagrid的checkbox:true ，该方法仅识别勾选的数据,如：columns:[[{field:"userId",checkbox:true}]]
+    
+- **示例**
     
-    - **示例**
-    
-    ```JS
-    
-    /**初始化datagrid**/
-    var userDatagrid = UI.initDatagrid("#userDatagrid",{
-		  url: "User/getList",
-	    idField:"userId",
-	    onDblClickRow:function(index,row){
-	    	User.editUser();
-	    },
-	    toolbar:"#userToolbar",
-	    menuSelector:"#userContextMenu",//菜单
-	    columns:[[    
-            {field:"userId",checkbox:true},//要使用UI.deleteByDatagrid删除方法，必须设置checkbox:true
-            {field:"userName",title:""},    
-            {field:"loginName",title:""},    
-            {field:"phoneNumber",title:""}, 
-        ]]
-	});
-  ```
-  
   ```JS
-  
-  //删除方法
+ //删除方法
   function deleteUser(){
     UI.deleteByDatagrid(userDatagrid, "User/delete", "userId");
   }
+	
+  ```
   
-    ```
     
     ### 其他
     - **示例**
