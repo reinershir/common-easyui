@@ -201,14 +201,14 @@ public class Result {
       UI.showMessage("删除成功！");
       
       /**
-		  * 创建窗口 参数是json格式
-		  * @param url url  
-		  * @param title 窗口标题
-		  * @param callback 点击确定按钮的回调函数
-		  * @param width  窗口宽度 可以不指定
-		  * @param height 窗口高度 可以不指定
-		  * @param tools 添加额外按钮
-		  **/
+	  * 创建窗口 参数是json格式
+	  * @param url url  
+	  * @param title 窗口标题
+	  * @param callback 点击确定按钮的回调函数
+	  * @param width  窗口宽度 可以不指定
+	  * @param height 窗口高度 可以不指定
+	  * @param tools 添加额外按钮
+	  **/
       UI.createWindow({
         url:'',
         title:'',
@@ -224,17 +224,17 @@ public class Result {
 					}
 				}]
       });
-      
-      
+      ```
+      ```JS
       /**
-		  * easyui FORM表单说明
-		  * @param id FORM的ID 如'#form'
-		  * @param parament json格式 名称和原来的一样 添加了progressText(进度条文本),dataType(设置dataType='json')回调函数返回的值会自动转换成json格式
-		  * parament.autoCloseProgress 关闭进度条方式，默认在success回调函数中关闭,设置为false则在回调函数执行完毕后再关闭进度条
-		  * parament.autoValidate 是否自动验证，设置false不自动验证表单，默认自动验证在onSumit时验证
-		  * parment.progress false表示不显示进度条
-		  * parment.ok  配置createWindow使用的 确定按钮，如传入则用此方法控制该按钮
-		  */
+	  * easyui FORM表单说明
+	  * @param id FORM的ID 如'#form'
+	  * @param parament json格式 名称和原来的一样 添加了progressText(进度条文本),dataType(设置dataType='json')回调函数返回的值会			自动转换成json格式
+	  * parament.autoCloseProgress 关闭进度条方式，默认在success回调函数中关闭,设置为false则在回调函数执行完毕后再关闭进度条
+	  * parament.autoValidate 是否自动验证，设置false不自动验证表单，默认自动验证在onSumit时验证
+	  * parment.progress false表示不显示进度条
+	  * parment.ok  配置createWindow使用的 确定按钮，如传入则用此方法控制该按钮
+	  */
       UI.formSubmit("#formId",{
         url:'user/sava',
         success:function(){
