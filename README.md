@@ -173,7 +173,6 @@ public class Result {
 - **示例**
     
   ```JS
- //删除方法
   function deleteUser(){
     UI.deleteByDatagrid(userDatagrid, "User/delete", "userId");
   }
