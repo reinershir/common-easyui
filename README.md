@@ -184,15 +184,15 @@ public class Result {
   
     
 ### 其他
-   
-    - **示例**
-    
-*提示消息
+
+提示消息
+
  ```JS
      UI.showMessage("删除成功！");
  ```
     
-*创建窗口
+创建窗口
+
 ```JS
       UI.createWindow({
         url:'',
@@ -211,7 +211,10 @@ public class Result {
       });
 ```
 
-- ** 说明
+
+- **说明**
+
+创建窗口说明
 
 	  * 创建窗口 参数是json格式
 	  * @param url url  
@@ -223,7 +226,7 @@ public class Result {
       
       
       
-      
+ - ** 提交表单说明 
 ```JS
 	/**
 		  * easyui FORM表单说明
