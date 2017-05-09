@@ -16,9 +16,9 @@
   6、封装了AJAX和FormSubmit 支持在提交过程中显示“加载中...”
   
   
-  ## API使用说明
+# API使用说明
   
-  ### 可编辑DataGrid
+  ## 可编辑DataGrid
   - **示例**
   ```HTML
   <table id="url_dategrid_add" title="URL列表" style="width:690px;">
@@ -46,7 +46,7 @@
   
   ```
   
-   ### 新增数据
+  ## 新增数据
   - **说明**
   ```JS
   UI.addByWindow({
@@ -62,7 +62,7 @@
   
    ```
    
-     - **示例**
+- **示例**
      
   ```JS
   var userDatagrid = $("#userDatagrid");
@@ -129,9 +129,9 @@ public class Result {
 }
 ```
   
-### 修改数据
+## 修改数据
   
-  - **示例**
+- **示例**
   
   ```JS
   /**
